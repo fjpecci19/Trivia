@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Trivia</string>
+    <string name="question">¿Which club is this one?</string>
+    <string name="question_2">¿Which is the greatest Manchester?</string>
+    <string name="city">Manchester City</string>
+    <string name="united">Manchester United</string>
+    <string name="madrid">Real Madrid</string>
+    <string name="sociedad">Real Sociedad</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="correct">Correct</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

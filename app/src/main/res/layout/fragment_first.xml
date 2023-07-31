@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".FirstFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fuol">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/trivia_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:text="@string/app_name"
+                android:textSize="75sp"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/trivia_title"
+                android:textColor="@color/white"
+                android:text="@string/question"
+                android:textSize="25sp"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="500dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/question"
+                android:src="@drawable/manchester"/>
+
+            <LinearLayout
+                android:id="@+id/first_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_1"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+
+                <Button
+                    android:id="@+id/option1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/city"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/skyblue"
+                    android:textColor="@color/black"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/option2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/united"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/red"
+                    android:textColor="@color/black"
+                    tools:ignore="VisualLintButtonSize" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/question_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_below="@id/first_question"
+                android:textColor="@color/white"
+                android:text="@string/question"
+                android:textSize="25sp"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="500dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/question_2"
+                android:src="@drawable/realmadrid"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_2"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+
+                <Button
+                    android:id="@+id/option3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/madrid"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/option4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sociedad"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/skyblue"
+                    android:textColor="@color/black"
+                    tools:ignore="VisualLintButtonSize" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
