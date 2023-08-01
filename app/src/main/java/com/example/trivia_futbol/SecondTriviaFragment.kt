@@ -26,7 +26,7 @@ class SecondTriviaFragment : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
             MainFragment.puntodos = 1
-            MainFragment.finishedtwo = true
+            MainFragment.finishedtwo = 2
         }
 
         binding.option3.setOnClickListener {
@@ -36,7 +36,7 @@ class SecondTriviaFragment : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
             MainFragment.puntodos = 2
-            MainFragment.finishedtwo = true
+            MainFragment.finishedtwo = 2
         }
 
         return binding.root

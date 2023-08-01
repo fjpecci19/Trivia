@@ -26,7 +26,6 @@ class MainFragment : Fragment() {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_navigation_container, firstTriviaFragment)
             transaction.commit()
-            puntouno = 0
         }
 
         binding.second.setOnClickListener {
@@ -34,7 +33,6 @@ class MainFragment : Fragment() {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_navigation_container, secondTriviaFragment)
             transaction.commit()
-            puntodos = 0
         }
 
         binding.third.setOnClickListener {
@@ -42,7 +40,20 @@ class MainFragment : Fragment() {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_navigation_container, thirdTriviaFragment)
             transaction.commit()
+        }
+
+        binding.restart.setOnClickListener {
+            cont = 0
+            puntouno = 0
+            puntodos = 0
             puntotres = 0
+            finishedone = 0
+            finishedtwo = 0
+            finishedthree = 0
+            binding.points.text = cont.toString()
+            binding.first.isEnabled = true
+            binding.second.isEnabled = true
+            binding.third.isEnabled = true
         }
 
         if (puntouno == 2) {
@@ -59,15 +70,15 @@ class MainFragment : Fragment() {
 
         binding.points.text = cont.toString()
 
-        if (finishedone){
+        if (finishedone == 2){
             binding.first.isEnabled = false
         }
 
-        else if (finishedtwo){
+        if (finishedtwo == 2){
             binding.second.isEnabled = false
         }
 
-        else if (finishedthree){
+        if (finishedthree == 2){
             binding.third.isEnabled = false
         }
 
@@ -78,9 +89,9 @@ class MainFragment : Fragment() {
         var puntouno: Int = 0
         var puntodos: Int = 0
         var puntotres: Int = 0
-        var finishedone: Boolean = false
-        var finishedtwo: Boolean = false
-        var finishedthree: Boolean = false
+        var finishedone: Int = 0
+        var finishedtwo: Int = 0
+        var finishedthree: Int = 0
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
