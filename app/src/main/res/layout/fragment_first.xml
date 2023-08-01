@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".FirstFragment">
+    tools:context="com.example.trivia_futbol.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -43,7 +43,8 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/question"
-                android:src="@drawable/manchester"/>
+                android:src="@drawable/manchester"
+                android:importantForAccessibility="no" />
 
             <LinearLayout
                 android:id="@+id/first_question"
@@ -98,7 +99,8 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/question_2"
-                android:src="@drawable/realmadrid"/>
+                android:src="@drawable/realmadrid"
+                android:importantForAccessibility="no" />
 
             <LinearLayout
                 android:layout_width="match_parent"
