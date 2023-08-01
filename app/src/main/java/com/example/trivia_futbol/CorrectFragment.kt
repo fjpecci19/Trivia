@@ -12,9 +12,6 @@ import com.example.trivia_futbol.databinding.FragmentCorrectBinding
 class CorrectFragment : Fragment() {
 
     private lateinit var binding: FragmentCorrectBinding
-    private lateinit var binding2: FirstTriviaFragment
-    private lateinit var binding3: SecondTriviaFragment
-    private lateinit var binding4: ThirdTriviaFragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +25,6 @@ class CorrectFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, mainFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-
         }
 
         return binding.root
