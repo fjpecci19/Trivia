@@ -24,7 +24,7 @@ class FirstTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, incorrectFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            puntouno = false
+            MainFragment.puntouno = false
             MainFragment.finishedone = true
         }
 
@@ -34,13 +34,10 @@ class FirstTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, correctFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            puntouno = true
+            MainFragment.puntouno = true
             MainFragment.finishedone = true
         }
 
         return binding.root
-    }
-    companion object{
-        var puntouno: Boolean = false
     }
 }

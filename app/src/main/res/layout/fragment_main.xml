@@ -78,6 +78,17 @@
                     android:gravity="center_horizontal"
                     android:textSize="30sp"
                     android:layout_marginTop="50dp"/>
+
+                <Button
+                    android:id="@+id/restart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/points"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:text="@string/restart"
+                    android:textSize="20sp"
+                    android:layout_marginTop="50dp"/>
             </RelativeLayout>
         </ScrollView>
     </FrameLayout>

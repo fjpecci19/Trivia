@@ -24,7 +24,7 @@ class ThirdTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, incorrectFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            puntotres = false
+            MainFragment.puntotres = false
             MainFragment.finishedthree = true
         }
 
@@ -34,7 +34,7 @@ class ThirdTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, correctFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            puntotres = true
+            MainFragment.puntotres = true
             MainFragment.finishedthree = true
         }
 

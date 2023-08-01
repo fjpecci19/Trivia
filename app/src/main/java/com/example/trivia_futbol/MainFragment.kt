@@ -26,7 +26,6 @@ class MainFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, firstTriviaFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            FirstTriviaFragment.puntouno = false
         }
 
         binding.second.setOnClickListener {
@@ -35,7 +34,6 @@ class MainFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, secondTriviaFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            SecondTriviaFragment.puntodos = false
         }
 
         binding.third.setOnClickListener {
@@ -44,18 +42,25 @@ class MainFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, thirdTriviaFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            ThirdTriviaFragment.puntotres = false
         }
 
-        if (FirstTriviaFragment.puntouno) {
+        binding.restart.setOnClickListener {
+            binding.first.isEnabled = true
+            binding.second.isEnabled = true
+            binding.third.isEnabled = true
+            cont = 0
+            binding.points.text = cont.toString()
+        }
+
+        if (puntouno) {
             cont += 1
         }
 
-        else if (SecondTriviaFragment.puntodos){
+        if (puntodos){
             cont += 1
         }
 
-        else if (ThirdTriviaFragment.puntotres){
+        if (puntotres){
             cont += 1
         }
 
@@ -73,10 +78,15 @@ class MainFragment : Fragment() {
 
         binding.points.text = cont.toString()
 
+        cont = 0
+
         return binding.root
     }
     companion object{
         var cont: Int = 0
+        var puntouno: Boolean = false
+        var puntodos: Boolean = false
+        var puntotres: Boolean = false
         var finishedone: Boolean = false
         var finishedtwo: Boolean = false
         var finishedthree: Boolean = false

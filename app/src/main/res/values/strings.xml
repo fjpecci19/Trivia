@@ -17,4 +17,5 @@
     <string name="second_trivia">Second Question</string>
     <string name="third_trivia">Third Question</string>
     <string name="points">Points: </string>
+    <string name="restart">Restart</string>
 </resources>
