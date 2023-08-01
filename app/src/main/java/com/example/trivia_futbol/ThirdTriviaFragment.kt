@@ -24,6 +24,7 @@ class ThirdTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, incorrectFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            puntotres = false
         }
 
         binding.option5.setOnClickListener {
@@ -32,8 +33,12 @@ class ThirdTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, correctFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            puntotres = true
         }
 
         return binding.root
+    }
+    companion object{
+        var puntotres: Boolean = false
     }
 }

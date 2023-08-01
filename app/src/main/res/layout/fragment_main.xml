@@ -67,6 +67,17 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     tools:ignore="VisualLintButtonSize" />
+
+                <TextView
+                    android:id="@+id/points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/third"
+                    android:textColor="@color/white"
+                    android:text="@string/points"
+                    android:gravity="center_horizontal"
+                    android:textSize="30sp"
+                    android:layout_marginTop="50dp"/>
             </RelativeLayout>
         </ScrollView>
     </FrameLayout>

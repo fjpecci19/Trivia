@@ -10,4 +10,7 @@ class MainActivity : AppCompatActivity() {
 
         window.statusBarColor = 0x00000000
     }
+    companion object{
+        var cont: Int = 0
+    }
 }

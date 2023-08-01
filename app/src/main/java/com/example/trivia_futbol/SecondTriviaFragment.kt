@@ -25,6 +25,7 @@ class SecondTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, incorrectFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            puntodos= false
         }
 
         binding.option3.setOnClickListener {
@@ -33,8 +34,12 @@ class SecondTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, correctFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            puntodos = true
         }
 
         return binding.root
+    }
+    companion object{
+        var puntodos: Boolean = false
     }
 }

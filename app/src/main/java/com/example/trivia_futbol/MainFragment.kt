@@ -43,6 +43,22 @@ class MainFragment : Fragment() {
             transaction.commit()
         }
 
+        if (FirstTriviaFragment.puntouno) {
+            cont += 1
+        }
+
+        else if (SecondTriviaFragment.puntodos){
+            cont += 1
+        }
+
+        else if (ThirdTriviaFragment.puntotres){
+            cont += 1
+        }
+        binding.points.text = cont.toString()
+
         return binding.root
+    }
+    companion object{
+        var cont: Int = 0
     }
 }
