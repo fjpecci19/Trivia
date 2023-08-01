@@ -26,6 +26,7 @@ class MainFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, firstTriviaFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            puntouno = false
         }
 
         binding.second.setOnClickListener {
@@ -34,6 +35,7 @@ class MainFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, secondTriviaFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            puntodos = false
         }
 
         binding.third.setOnClickListener {
@@ -42,6 +44,7 @@ class MainFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, thirdTriviaFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            puntotres = false
         }
 
         binding.restart.setOnClickListener {

@@ -88,7 +88,8 @@
                     android:textColor="@color/black"
                     android:text="@string/restart"
                     android:textSize="20sp"
-                    android:layout_marginTop="50dp"/>
+                    android:layout_marginTop="50dp"
+                    tools:ignore="VisualLintButtonSize" />
             </RelativeLayout>
         </ScrollView>
     </FrameLayout>

@@ -24,6 +24,7 @@ class IncorrectFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, mainFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            MainFragment.puntouno = false
         }
 
         return binding.root
@@ -32,7 +33,6 @@ class IncorrectFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-
             }
         })
     }
