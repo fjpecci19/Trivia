@@ -20,15 +20,13 @@ class MainFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
 
         binding.first.setOnClickListener {
-            val firstFragment = FirstFragment()
+            val firstTriviaFragment = FirstTriviaFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.main_navigation_container, firstFragment)
+            transaction.replace(R.id.main_navigation_container, firstTriviaFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-
         }
 
         return binding.root
     }
-
 }

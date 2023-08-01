@@ -1,0 +1,35 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.trivia_futbol.MainActivity"
+        android:gravity="center"
+        android:background="@color/green">
+
+        <TextView
+            android:id="@+id/incorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/correct"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/back_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:text="@string/back"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black" />
+    </FrameLayout>
+</layout>

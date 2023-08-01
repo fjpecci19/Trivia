@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.trivia_futbol.SecondFragment"
+        android:name="com.example.trivia_futbol.IncorrectFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_incorrect" />
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.example.trivia_futbol.ThirdFragment"
+        android:name="com.example.trivia_futbol.CorrectFragment"
         android:label="ThirdFragment" />
     <fragment
         android:id="@+id/mainFragment"
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.trivia_futbol.FirstFragment"
+        android:name="com.example.trivia_futbol.FirstTriviaFragment"
         android:label="FirstFragment" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
