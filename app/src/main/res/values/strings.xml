@@ -9,4 +9,7 @@
     <string name="incorrect">Incorrect</string>
     <string name="correct">Correct</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="answers">Correct answers: </string>
+    <string name="restart">Restart</string>
+    <string name="first_trivia">First Trivia</string>
 </resources>
