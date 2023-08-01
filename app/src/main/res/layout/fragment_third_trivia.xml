@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context="com.example.trivia_futbol.MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fuol">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/trivia_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:textColor="@color/white"
+                    android:text="@string/app_name"
+                    android:textSize="75sp"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_below="@id/trivia_title"
+                    android:textColor="@color/white"
+                    android:text="@string/question"
+                    android:textSize="25sp"
+                    android:gravity="center_horizontal" />
+
+                <ImageView
+                    android:id="@+id/image_1"
+                    android:layout_width="500dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/question"
+                    android:src="@drawable/barca"
+                    android:importantForAccessibility="no" />
+
+                <LinearLayout
+                    android:id="@+id/first_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="75dp">
+
+                    <Button
+                        android:id="@+id/option5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/barcelona"
+                        android:textSize="15sp"
+                        android:backgroundTint="@color/blue"
+                        android:textColor="@color/white"
+                        tools:ignore="VisualLintButtonSize" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/option6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/sevilla"
+                        android:textSize="15sp"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        tools:ignore="VisualLintButtonSize"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>

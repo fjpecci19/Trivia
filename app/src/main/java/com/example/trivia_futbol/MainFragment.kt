@@ -35,6 +35,14 @@ class MainFragment : Fragment() {
             transaction.commit()
         }
 
+        binding.third.setOnClickListener {
+            val thirdTriviaFragment = ThirdTriviaFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.main_navigation_container, thirdTriviaFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
         return binding.root
     }
 }
