@@ -6,31 +6,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import com.example.trivia_futbol.databinding.FragmentMainBinding
+import com.example.trivia_futbol.databinding.FragmentFirstTriviaBinding
+import com.example.trivia_futbol.databinding.FragmentSecondTriviaBinding
 
-class MainFragment : Fragment() {
+class SecondTriviaFragment : Fragment() {
 
-    private lateinit var binding: FragmentMainBinding
-
+    private lateinit var binding: FragmentSecondTriviaBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_second_trivia, container, false)
 
-        binding.first.setOnClickListener {
-            val firstTriviaFragment = FirstTriviaFragment()
+        binding.option4.setOnClickListener {
+            val incorrectFragment = IncorrectFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.main_navigation_container, firstTriviaFragment)
+            transaction.replace(R.id.main_navigation_container, incorrectFragment)
             transaction.addToBackStack(null)
             transaction.commit()
         }
 
-        binding.second.setOnClickListener {
-            val secondTriviaFragment = SecondTriviaFragment()
+        binding.option3.setOnClickListener {
+            val correctFragment = CorrectFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.main_navigation_container, secondTriviaFragment)
+            transaction.replace(R.id.main_navigation_container, correctFragment)
             transaction.addToBackStack(null)
             transaction.commit()
         }

@@ -17,6 +17,7 @@ class FirstTriviaFragment : Fragment() {
     ): View {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first_trivia, container, false)
+
         binding.option1.setOnClickListener {
             val incorrectFragment = IncorrectFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()

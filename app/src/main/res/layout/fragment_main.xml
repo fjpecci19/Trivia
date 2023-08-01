@@ -39,7 +39,19 @@
                     android:layout_below="@id/trivia_title"
                     android:layout_marginTop="75dp"
                     android:text="@string/first_trivia"
-                    android:backgroundTint="@color/skyblue"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <Button
+                    android:id="@+id/second"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/first"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/second_trivia"
+                    android:backgroundTint="@color/white"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     tools:ignore="VisualLintButtonSize" />

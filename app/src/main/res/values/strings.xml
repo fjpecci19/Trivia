@@ -12,5 +12,6 @@
     <string name="answers">Correct answers: </string>
     <string name="back">Back</string>
     <string name="first_trivia">First Trivia</string>
+    <string name="second_trivia">Second Trivia</string>
     <string name="points">Points</string>
 </resources>
