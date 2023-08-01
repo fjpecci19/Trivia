@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import com.example.trivia_futbol.databinding.FragmentFirstTriviaBinding
 
@@ -24,7 +25,7 @@ class FirstTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, incorrectFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            MainFragment.puntouno = false
+            MainFragment.puntouno = 1
             MainFragment.finishedone = true
         }
 
@@ -34,10 +35,17 @@ class FirstTriviaFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, correctFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            MainFragment.puntouno = true
+            MainFragment.puntouno = 2
             MainFragment.finishedone = true
         }
 
         return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+            }
+        })
     }
 }

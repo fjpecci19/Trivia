@@ -20,76 +20,64 @@ class MainFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
 
+
         binding.first.setOnClickListener {
             val firstTriviaFragment = FirstTriviaFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_navigation_container, firstTriviaFragment)
-            transaction.addToBackStack(null)
             transaction.commit()
-            puntouno = false
+            puntouno = 0
         }
 
         binding.second.setOnClickListener {
             val secondTriviaFragment = SecondTriviaFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_navigation_container, secondTriviaFragment)
-            transaction.addToBackStack(null)
             transaction.commit()
-            puntodos = false
+            puntodos = 0
         }
 
         binding.third.setOnClickListener {
             val thirdTriviaFragment = ThirdTriviaFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_navigation_container, thirdTriviaFragment)
-            transaction.addToBackStack(null)
             transaction.commit()
-            puntotres = false
+            puntotres = 0
         }
 
-        binding.restart.setOnClickListener {
-            binding.first.isEnabled = true
-            binding.second.isEnabled = true
-            binding.third.isEnabled = true
-            cont = 0
-            binding.points.text = cont.toString()
-        }
-
-        if (puntouno) {
+        if (puntouno == 2) {
             cont += 1
         }
 
-        if (puntodos){
+        else if (puntodos == 2){
             cont += 1
         }
 
-        if (puntotres){
+        else if (puntotres == 2){
             cont += 1
         }
+
+        binding.points.text = cont.toString()
 
         if (finishedone){
             binding.first.isEnabled = false
         }
 
-        if (finishedtwo){
+        else if (finishedtwo){
             binding.second.isEnabled = false
         }
 
-        if (finishedthree){
+        else if (finishedthree){
             binding.third.isEnabled = false
         }
-
-        binding.points.text = cont.toString()
-
-        cont = 0
 
         return binding.root
     }
     companion object{
         var cont: Int = 0
-        var puntouno: Boolean = false
-        var puntodos: Boolean = false
-        var puntotres: Boolean = false
+        var puntouno: Int = 0
+        var puntodos: Int = 0
+        var puntotres: Int = 0
         var finishedone: Boolean = false
         var finishedtwo: Boolean = false
         var finishedthree: Boolean = false

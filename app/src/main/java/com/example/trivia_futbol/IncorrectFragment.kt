@@ -24,7 +24,9 @@ class IncorrectFragment : Fragment() {
             transaction.replace(R.id.main_navigation_container, mainFragment)
             transaction.addToBackStack(null)
             transaction.commit()
-            MainFragment.puntouno = false
+            MainFragment.puntouno = 1
+            MainFragment.puntodos = 1
+            MainFragment.puntotres = 1
         }
 
         return binding.root
