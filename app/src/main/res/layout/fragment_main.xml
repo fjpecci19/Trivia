@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context="com.example.trivia_futbol.MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fuol">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/trivia_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@color/white"
+                    android:text="@string/app_name"
+                    android:textSize="75sp"
+                    android:gravity="center_horizontal" />
+
+                <Button
+                    android:id="@+id/first"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/trivia_title"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/first_trivia"
+                    android:backgroundTint="@color/skyblue"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:ignore="VisualLintButtonSize" />
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>
