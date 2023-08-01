@@ -58,20 +58,20 @@ class MainFragment : Fragment() {
         else if (ThirdTriviaFragment.puntotres){
             cont += 1
         }
-        binding.points.text = cont.toString()
 
-
-        if (MainFragment.finishedone){
+        if (finishedone){
             binding.first.isEnabled = false
         }
 
-        if (MainFragment.finishedtwo){
+        if (finishedtwo){
             binding.second.isEnabled = false
         }
 
-        if (MainFragment.finishedthree){
+        if (finishedthree){
             binding.third.isEnabled = false
         }
+
+        binding.points.text = cont.toString()
 
         return binding.root
     }
