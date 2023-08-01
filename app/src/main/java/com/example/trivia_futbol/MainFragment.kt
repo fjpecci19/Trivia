@@ -12,6 +12,7 @@ import com.example.trivia_futbol.databinding.FragmentMainBinding
 class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
+    private var puntos = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,7 +51,9 @@ class MainFragment : Fragment() {
             finishedone = 0
             finishedtwo = 0
             finishedthree = 0
-            binding.points.text = cont.toString()
+            puntos = getString(R.string.points)
+            puntos += " $cont"
+            binding.points.text = puntos
             binding.first.isEnabled = true
             binding.second.isEnabled = true
             binding.third.isEnabled = true
@@ -68,7 +71,9 @@ class MainFragment : Fragment() {
             cont += 1
         }
 
-        binding.points.text = cont.toString()
+        puntos = getString(R.string.points)
+        puntos += " $cont"
+        binding.points.text = puntos
 
         if (finishedone == 2){
             binding.first.isEnabled = false
