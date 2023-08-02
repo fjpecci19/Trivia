@@ -84,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/points"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="@color/yellow"
                     android:textColor="@color/black"
                     android:text="@string/restart"
                     android:textSize="20sp"

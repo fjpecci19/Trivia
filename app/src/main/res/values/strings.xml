@@ -13,9 +13,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="answers">Correct answers: </string>
     <string name="back">Back</string>
-    <string name="first_trivia">First Question</string>
-    <string name="second_trivia">Second Question</string>
-    <string name="third_trivia">Third Question</string>
+    <string name="first_trivia">First Question ⬜</string>
+    <string name="first_trivia_done">First Question ⬛</string>
+    <string name="second_trivia">Second Question ⬜</string>
+    <string name="second_trivia_done">Second Question ⬛</string>
+    <string name="third_trivia">Third Question ⬜</string>
+    <string name="third_trivia_done">Third Question ⬛</string>
     <string name="points">Points: </string>
     <string name="restart">Restart</string>
 </resources>

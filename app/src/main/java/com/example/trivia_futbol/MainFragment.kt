@@ -57,6 +57,9 @@ class MainFragment : Fragment() {
             binding.first.isEnabled = true
             binding.second.isEnabled = true
             binding.third.isEnabled = true
+            binding.first.text = getString(R.string.first_trivia)
+            binding.second.text = getString(R.string.second_trivia)
+            binding.third.text = getString(R.string.third_trivia)
         }
 
         if (puntouno == 2) {
@@ -77,14 +80,17 @@ class MainFragment : Fragment() {
 
         if (finishedone == 2){
             binding.first.isEnabled = false
+            binding.first.text = getString(R.string.first_trivia_done)
         }
 
         if (finishedtwo == 2){
             binding.second.isEnabled = false
+            binding.second.text = getString(R.string.second_trivia_done)
         }
 
         if (finishedthree == 2){
             binding.third.isEnabled = false
+            binding.third.text = getString(R.string.third_trivia_done)
         }
 
         return binding.root
